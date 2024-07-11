@@ -3,7 +3,7 @@ import mailIcon from "../assets/images/icon-email.svg";
 import passwordIcon from "../assets/images/icon-password.svg";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Signup() {
   return (
     <div className="py-8 px-8  sm:px-0 min-h-[100vh] w-full h-full bg-neutral-extraLight flex justify-start sm:justify-center flex-col items-center gap-12">
       <img src={logo} alt="logo" className=" self-start sm:self-center " />
@@ -11,8 +11,10 @@ function Login() {
       <div className="p-0 sm:p-10 bg-none sm:bg-white rounded-xl flex-col flex gap-10 w-[476px] max-w-full self-start sm:self-center  ">
         {/* Form Heading */}
         <div className="flex flex-col gap-2 text-neutral-medium">
-          <h1 className="text-neutral-dark font-bold text-3xl">Login</h1>
-          <p>Add your details below to get back into the app</p>
+          <h1 className="text-neutral-dark font-bold text-3xl">
+            Create account
+          </h1>
+          <p>Let’s get you started sharing your links!</p>
         </div>
         <form className="flex flex-col gap-6">
           {/* Email Input */}
@@ -36,7 +38,7 @@ function Login() {
           {/* Password Input */}
           <div className="flex flex-col gap-1">
             <label htmlFor="mail" className="text-neutral-dark  text-xs ">
-              Password
+              Create password
             </label>
             <div className="relative">
               <img
@@ -51,15 +53,33 @@ function Login() {
               />
             </div>
           </div>
-          {/* Login Submit Button */}
+          {/* Confirm Password Input */}
+          <div className="flex flex-col gap-1">
+            <label htmlFor="mail" className="text-neutral-dark  text-xs ">
+              Confirm password
+            </label>
+            <div className="relative">
+              <img
+                src={passwordIcon}
+                alt="mail Icon"
+                className="absolute top-1/2 translate-y-[-50%] left-4"
+              />
+              <input
+                placeholder="Enter your password"
+                className="outline-none border border-neutral-light rounded-xl  py-3 px-4  w-[100%] pl-11 focus:border-primary-default focus:shadow-activeShadow transition-all"
+                type="mail"
+              />
+            </div>
+          </div>
+          {/* Signup Submit Button */}
           <button className="w-[100%] bg-primary-default rounded-xl py-3 px-7 text-white font-semibold text-base hover:bg-primary-light focus:shadow-activeShadow transition-all ">
-            Login
+            Signup
           </button>
           {/* Create Account */}
           <p className="text-base text-neutral-medium text-center">
-            Don’t have an account?{" "}
-            <Link to="/signup" className="text-primary-default">
-              Create account
+            Already have an account?{" "}
+            <Link to="/login" className="text-primary-default">
+              Login
             </Link>
           </p>
         </form>
@@ -68,4 +88,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;

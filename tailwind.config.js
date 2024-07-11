@@ -6,12 +6,7 @@ export default {
       boxShadow: {
         activeShadow: "0 0 32px 0 rgba(99, 60, 255, 0.25)",
       },
-      width: {
-        full: "100dvw",
-      },
-      height: {
-        full: "100dvh",
-      },
+
       colors: {
         primary: {
           default: "#633CFF",
